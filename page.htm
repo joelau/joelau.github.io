@@ -48,6 +48,10 @@ jQuery.extend({
 		//doi:
 		data = data.replace(/doi:((\w|\/|[-._;():A-Z0-9])+)/gi,'<a href=http://hdl.handle.net/$1>doi:$1</a>');
 		
+		//hkulib:
+		data = data.replace(/hkulib:((\w+)/gi,'<a href=http://library.hku.hk/record=$1>hkulib:$1</a>');
+
+http://library.hku.hk/record=b1392642
 
 		html = converter.makeHtml(data);
 		
