@@ -36,7 +36,7 @@ jQuery.extend({
 	$.get( './pages/'+queryParams['p']+".htm", function( data ) {
 		
 		// internal links
-		data = data.replace(/[[(\w+)]]/g,"<a href=https://joelau.github.io/page.htm?p=$1>$1</a>");
+		data = data.replace(/\[\[(\w+)\]\]/g,"<a href=https://joelau.github.io/page.htm?p=$1>$1</a>");
 
 		//doi:
 		
@@ -57,7 +57,7 @@ jQuery.extend({
 </head>
 <body>
   <div class="container">
-  <h1>Wiki</h1>
+  <h1>Wiki <small><i class="fa fa-home"></i> . courses </small></h1>
   <hr>
 <div class="row">
 <div id="maintext"></div>
