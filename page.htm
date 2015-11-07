@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<title>Home page</title>
+	<title  class='pagetitle'>Home page</title>
 
 </head>
 <body>
@@ -14,7 +14,7 @@
   <div class="row">
   <h1>Wiki <small><i class="fa fa-home"></i> . courses </small></h1>
   <hr>
-
+	<h1><span class='pagetitle'>pagetitle</span></h1>
 <div id="maintext"></div>
 </div>
 </div>
@@ -33,8 +33,8 @@ jQuery.extend({
 <script> 
    $(function(){
 	var queryParams = $.getQueryParameters();
-	console.log('page to load = '+queryParams['p']);
-
+	var filename = queryParams['p'];
+	$('.pagetitle').html(filename);
 	var converter = new Showdown.converter();
 
 	$.get( './pages/'+queryParams['p']+".htm", function( data ) {
