@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Home page</title>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="showdown.js">
+</script>
+<script>
+jQuery.extend({
+
+  getQueryParameters : function(str) {
+	  return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+  }
+
+});
+</script>
+<script> 
+   $(function(){
+	var queryParams = $.getQueryParameters();
+	console.log('page to load = '+queryParams['p']);
+
+	var converter = new Showdown.converter();
+
+	$.get( './pages/'+queryParams['p']+".htm", function( data ) {
+		
+		// internal links
+		data = data.replace(/{{(\w+)}}/g,"<a href=$1>$1</a>");
+
+		//doi:
+		
+		data = data.replace(/doi:((\w|\/|[-._;():A-Z0-9])+)/gi,'<a href=http://hdl.handle.net/$1>doi:$1</a>');
+		
+
+		html = converter.makeHtml(data);
+		
+		
+		console.log( html );
+		$('#maintext').html(html);
+	});
+		
+    
+   });
+
+</script> 
+</head>
+<body>
+<div id="maintext"></div>
+</body>
+</html> 
