@@ -47,8 +47,10 @@ jQuery.extend({
 		// internal links
 		data = data.replace(/\[\[(\w+)\]\]/g,"<a href=https://joelau.github.io/page.htm?p=$1>$1</a>");
 
+		// strikethrough font
+		data = data.replace(/~~(\w+)~~/g,"<strike>$1</strike>");	
+
 		//doi:
-		
 		data = data.replace(/doi:((\w|\/|[-._;():A-Z0-9])+)/gi,'<a href=http://hdl.handle.net/$1>doi:$1</a>');
 		
 
