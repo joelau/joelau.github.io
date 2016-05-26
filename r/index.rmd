@@ -1,0 +1,204 @@
+---
+title: "PHIL2120 [09] Quine"
+author: "joe lau @ http://2120.joelau.info"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: slidy_presentation
+subtitle: Two dogmas of empiricism
+---
+##Quine
+
+![Quine](./media/quine.jpg)
+ 
+##Life (1908--2000)
+
+* Majored in mathematics and studied logic and philosophy
+* 1932 Harvard PhD on *Principia Mathematica* under Whitehead
+* Visited Carnap, Reichenbach, Gödel, Ayer and others in Europe
+* Taught at Harvard from 1936-1978
+* Served in the US Navy during WWII
+* 1951 "Two Dogmas of Empiricism"
+* 1960 *Word and Object* (indeterminacy of translation)
+* Retired in 1978 but remained active
+* Influences: Logic, language, epistemology
+
+##Carnap and Quine
+
+> Carnap was my greatest teacher ... even where we disagreed, he was still setting the theme, the line of my thought was largely determined by problems that I felt his position presented.
+
+##Background
+
+* Empiricism - knowledge must be based on experience.
+    * Why? What about logic and mathematics?
+    * Justification: A theory of meaning that appeals to the AS-distinction. 
+    * Analytic - necessary *a priori*; Synthetic - empirical.
+* Quine - Rejection of the distinction, holism
+* "blurring" of boundary between metaphysics and science
+* "shift towards pragmatism" - theory choice as pragmatic decision
+* Implications: meaning, semantics, epistemology
+
+##Which two dogmas?
+
+> That there is such a distinction to be drawn at all is an unempirical dogma of empiricists, a metaphysical article of faith.
+
+1. The analytic-synthetic distinction
+    * Intuitive - truth depends on facts and meaning. Analytic statements are true depending only on the meaning.
+    * If meaning realism is correct, then there ought to be synonymous expressions and hence analytic truths. 
+2. Reductionism - meaning is reducible to experience.
+    * More general assumption: Each sentence / word has its own meaning.
+* Quine remained an empiricist, that scientific knowledge is the paradigm of knowledge, with physics as the core of a unified science.
+
+
+##Overview of paper
+
+* Section I - Introduction and clarification
+* Sections II, III, IV - Against the first dogma
+    * Go through different definitions of analyticity and reject all of them. Only circular inter-definitions available linking analyticity with meaning, synonymy, necessity, and substitutability.
+* Section V - Against the second dogma
+* Section VI - The holism alternative
+
+##Some attempts to define analytic statements
+
+* = Statement whose negation is self-contradictory.
+    * Self-contradiction just as in need of clarification.
+* (Kant) = Statement that "attributes to its subject no more than is already conceptually contained in the subject."
+    * Not every analytic statement is of the subject-predicate format.
+    * Containment metaphor unclear.
+* = Statement true by definition
+    * Definitions depend on prior analytic statements.
+
+##Analyticity
+
+* An analytic statement is a statement that is true in virtue of its meaning.
+* What is meaning? The meaning of a term is not the same as its extension.
+* The main task of a theory of meaning is to account for meaningfulness, synonymy and analyticity.
+    * No need to insist on finding out which thing is meaning supposed to be.
+    * Compare: Frege's *sinn*.
+    
+##Two types of analytic statements
+
+1. Logically true statements
+    * Example: No umarried man is married.
+    * Logical truth = a statement "which is true and remains true under all reinterpretations of its components other than the logical particles."
+2. Statements that "can be turned into a logical truth by putting synonyms for synonyms".
+    * Example: No bachelor is married.
+    * The negation of analytic truth is thus a contradiction.
+* Quine: "the major difficulty lies not in the first class of analytic statements, the logical truths, but rather in the second class, which depends on the notion of synonymy."
+    * Appealing to definitions does not help, which presupposes an antecedent relationship of synonymy.
+    * Is Quine right about the logical truths?
+
+##Explaining synonymy in terms of substitution
+
+* Two terms are synonymous iff they can be interchanged in all contexts *salva veritate*. 
+* But has to set aside quotational and idiomatic contexts.
+    * "Bachelor" is one word.
+    * You will be given a Bachelor of Arts degree.
+* Synonymy between X and Y is equivalent to:
+    * "All and only Xs are Ys." is analytic.
+    * Example: "All and only bachelors are unmarried men".
+* Using necessity to explain analyticity instead.
+    * "Necessarily, all and only bachelors are unmarried men."
+
+##On necessity
+
+* Quine: "Does the adverb really make sense? To suppose that it does is to suppose that we have already made satisfactory sense of 'analytic'. Our argument is not flatly circulr, but something like it."
+    * Soames: Quine seems to assume that (1) all necessary truths are analytic, and that (2) analyticity is needed to explain necessity.
+    * Both claims are accepted by the logical positivists, but they are now rejected by many contemporary philosophers.
+    
+##Appeal to semantic rules in artificial languages
+
+* Quine: No idea whether "everything green is extended" is analytic.
+* Problem due to imprecision of natural language? Perhaps the problem will disappear in an artificial language with explicit "semantic rules"?
+* Quine's criticisms
+    * No help if the semantic rules are of the form: "sentences satisfying rules $R_{1} ... R_{n}$ are *analytic*".
+    * Not clear which set of rules of language count as "semantic rules".
+    
+##Vagueness in the AS distinction
+
+* The rules of natural languages are often imprecise not not explicit.
+* So there might not be a precise distinction between analytic and synthetic statements.
+* This suggests there is no precise distinction between philosophy (as conceptual analysis) and science.
+* Lack of a precise boundary marking a distinction does not imply that there is no distinction to be made.
+    
+##Verificationism
+
+* Quine: "if the verification theory can be accepted as an adequate account of statement synonymy, the notion of analyticity is saved after all."
+    * Analytic statements as statements that can be confirmed no matter what.
+    * Or: An analytic statement is one that is synonymous with a logical truth, where synonymy = alike in confirmation.
+* Radical reductionism
+    * Each statement can be translated into a statement about experience.
+    * Example: Carnap's *Aufbau*: Sense data + logic.
+
+> it is nonsense ... to speak of a linguistic component and a factual component in the truth of any individual statement.
+
+##The web of belief
+
+* If the notion of synonymy is problematic, then the idea that a statement has a determinate meaning is problematic too.
+    * Special case: The meaning of a statement is its verification condition.
+* Holism: "The unit of empirical significance is the whole of science."
+    * The meaning / empirical significance of a statement is not to be understood in isolation, but a matter of its contribution to the total theory of the world.
+    * Web of belief metaphor: The totality of our beliefs is a "man-made fabric which impinges on experience only along the edges."
+* Rejection of analyticity and conceptual revision
+    * "No statement is immune to revision"
+    * "Any statement can be held true come what may, if we make drastic enough adjustments elsewhere in the system."
+
+##Recent discussion: Boghossian and epistemic analyticity
+
+Boghossian (1996). Analyticity Reconsidered. *Noûs* 30 (3):360-391.
+
+* Boghossian: Two types of analyticity
+    * Metaphysical analyticity: Sentence *S* is true soley in virtue of its meaning independent of the facts.
+    * Epistemic analyticity: Understanding the meaning of *S* is sufficient for justified belief in the truth of *S*.
+* B: Quine has shown that metaphysical analyticity is untenable. But:
+    * Epistemic analyticity is still viable and is not affected by Quine's arguments.
+    * It serves to explain *a priori* knowledge.
+* Further discussion
+    * Margolis and Laurence (2001). Boghossian on analyticity. *Analysis* 61.4.
+    * Boghossian (2003). Epistemic Analyticity: A Defense. *Grazer Philosophische Studien* 66 (1):15-35.
+
+##Katz and the paradox of revisability
+
+Jerrold J. Katz (1998). *Realistic Rationalism*. MIT Press, pp. 72-4.
+
+* Katz: Quine's holism includes these principles:
+    * Principle of noncontradiction
+    * Principle of universal revisability
+    * Principle of simplicity
+* Katz: If these principles are correct, it is possible to give a good argument to revise them. But these principles must be assumed in any good argument for belief revision. But if the conclusion is that these principles are false, then the argument cannot be sound and hence not good.
+* See also Daniel Y. Elstein (2007). A New Revisability Paradox. Pacific Philosophical Quarterly 88 (3):308–318.
+
+##Grice and Strawson on the critical arguments
+
+H. P. Grice & P. F. Strawson (1956). In Defense of a Dogma. *Philosophical Review* 65 (2):141-158.
+
+* No distinction vs distinction misunderstood: We might criticize a distinction for being imprecise, ambiguous, not useful, lacking a clear explanation, etc. But this does not imply that there is *no* distinction.
+* It is wrong of Quine to argue that "analyticity" is senseless because it has not been given a definition except by similar words in the same group.
+    * Compare: truth, falsity, statement, fact, assertion, denial.
+    * Interdefinability is not necessarily a problem.
+    
+##Burden of proof
+
+* There is a presumption that the AS distinction is real.
+    * There is general agreement in philosophy about its application in vast number of particular cases, and the agreement extends to new cases.
+    * It is absurd to say that people are not making sense when they speak about synonymy, sameness of meaning, or accuracy of translation.
+    
+> If we are to give up the notion of sentence-synonymy as senseless, we must give up the notion of sentence-significance (of a sentence having meaning) as senseless too. But then perhaps we might as well give up the notion of sense.
+    
+##Grice and Strawson on Quine's holism
+
+* Quine's holism does not require the rejection of synonymy. It is however incompatible with the view that synonymy between *P* and *Q* is independent of their relation to other sentences. We can accept holism and revise the definition of synonymy accordingly.
+* The AS-distinction is also compatible with the idea that no statement is immune to revision. Conceptual revision allows a string of words that use to be analytic to become synthetic. There is no single conceptual scheme we have to use necessarily, but it does not follow that there is no necessity within a given conceptual scheme.
+
+##Outstanding issues
+
+* Connections between meaning, necessity, and analyticity
+* The nature and scientific status of meaning
+
+##etc
+
+###Further readings
+
+* Soames (2003) *Philosophical Analysis in the Twentieth Century: Volume 1: The Dawn of Analysis* Princeton University Press. Part 5.
+
+###Final essay
+
+* Announcement on Facebook later this week.
