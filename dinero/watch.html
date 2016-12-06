@@ -35,22 +35,6 @@ function getvar(variable)
 }
 19
 
-function chart_hk(code) {
-
-	var chart_url;
-	if (code==0) { return; }
-	code=parseInt(code);
-	document.write('hello');		
-	document.write("<img onclick=window.open(\"");
-	var url=jump2_hk.replace("STOCKCODE",code); 
-	document.write(url);	
-	document.write("\") src=");
-	chart_url-hk1;
-	if (m>0) { chart_url=hk_chart_month; }
-	url=chart_url.replace("STOCKCODE",code);
-	document.write(url+">");
-
-}
 
 function chart_us(code) {
 
