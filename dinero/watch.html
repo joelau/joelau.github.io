@@ -13,7 +13,9 @@ var hk1a, hk1b, us1a, us1b;
 
 hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart4=2&ref4para1=14&ref4para2=0&ref4para3=0&scheme=3&com=100&chartwidth=400&chartheight=350&stockid=STOCKCODE.HK&period=9&type=3&";
 
-hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=450&chartheight=400&stockid=STOCKCODE.HK&period=2061&type=1&indicator3=10&ind3para1=91.900&logoStyle=1&"
+hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=450&chartheight=400&stockid=STOCKCODE.HK&period=2061&type=1&indicator3=10&ind3para1=91.900&logoStyle=1&";
+
+hk_chart_month="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=450&chartheight=300&stockid=STOCKCODE.HK&period=18&type=1&logoStyle=1&";
 
 jump2_hk="http://www.aastocks.com/tc/stock/DetailChart.aspx?symbol=STOCKCODE";
 
@@ -35,13 +37,16 @@ function getvar(variable)
 
 function chart_hk(code) {
 
+	var chart_url;
 	if (code==0) { return; }
 	code=parseInt(code);
 	document.write("<img onclick=window.open(\"");
 	var url=jump2_hk.replace("STOCKCODE",code); 
 	document.write(url);	
 	document.write("\") src=");
-	url=hk1.replace("STOCKCODE",code);
+	chart_url-hk1;
+	if (m>0) { chart_url=hk_chart_month; }
+	url=chart_url.replace("STOCKCODE",code);
 	document.write(url+">");
 
 }
