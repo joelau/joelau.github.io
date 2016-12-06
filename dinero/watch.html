@@ -9,7 +9,7 @@ img {padding:5px};
 </style>
 <script>
 
-var hk1a, hk1b, us1a, us1b;
+var m,hk1a, hk1b, us1a, us1b;
 
 hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart4=2&ref4para1=14&ref4para2=0&ref4para3=0&scheme=3&com=100&chartwidth=400&chartheight=350&stockid=STOCKCODE.HK&period=9&type=3&";
 
@@ -40,6 +40,7 @@ function chart_hk(code) {
 	var chart_url;
 	if (code==0) { return; }
 	code=parseInt(code);
+	document.write('hello');		
 	document.write("<img onclick=window.open(\"");
 	var url=jump2_hk.replace("STOCKCODE",code); 
 	document.write(url);	
