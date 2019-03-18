@@ -18,7 +18,7 @@ hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&t
 hk1="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=450&chartheight=400&stockid=STOCKCODE.HK&period=2061&type=1&indicator3=10&ind3para1=91.900&logoStyle=1&";
 
 hk_chart_month="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=400&chartheight=300&stockid=STOCKCODE.HK&period=18&type=1&logoStyle=1&";
-
+hk_chart_week="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&scheme=3&com=100&chartwidth=600&chartheight=500&stockid=STOCKCODE.HK&period=11&type=1&logoStyle=1&"
 jump2_hk="http://www.aastocks.com/tc/stock/DetailChart.aspx?symbol=STOCKCODE";
 
 us1="http://charts.aastocks.com/servlet/Charts?com=100&logoStyle=1&chartwidth=550&chartheight=500&scheme=3&stockid=STOCKCODE.US&period=51&type=1&fontsize=12&Indicator=9&indpara1=20&indpara2=2&indpara3=-&indpara4=-&indpara5=-&subChart1=2&ref1para1=14&ref1para2=&ref1para3=&subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&ref3para1=&ref3para2=&ref3para3=&subChart4=0&ref4para1=&ref4para2=&ref4para3=&subChart5=0&ref5para1=&ref5para2=&ref5para3=&chiname=T&titlestyle=1&15MinDelay=T";
@@ -46,8 +46,8 @@ function chart_hk(code) {
 	var url=jump2_hk.replace("STOCKCODE",code); 
 	document.write(url);	
 	document.write("\") src=");
-	chart_url=hk1;
-	if (getvar("c")=='m') { chart_url=hk_chart_month; }
+
+	if (getvar("c")=='m') { chart_url=hk_chart_month; } else { chart_url=hk_chart_week; }
 	url=chart_url.replace("STOCKCODE",code);
 	document.write(url+">");
 
