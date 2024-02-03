@@ -1,0 +1,85 @@
+<html>
+<head><title>HK stocks</title></head>
+<style>
+img { padding: 5px; }
+</style>
+<body oncontextmenu="return false;">
+<div id="chart"><img id="c"></div>
+<div id="charts"></div>
+<script>
+hk_10y = "http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=400&chartheight=500&stockid=STOCKCODE.HK&period=18&type=1&logoStyle=1&";
+hk_week_3y = "http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&scheme=3&com=100&chartwidth=450&chartheight=350&stockid=STOCKCODE.HK&period=11&type=1&logoStyle=1&";
+hk_week_3y_RSI = "http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&scheme=3&com=100&chartwidth=420&chartheight=400&stockid=STOCKCODE.HK&period=11&type=1&logoStyle=1&";
+aastock_url = "http://www.aastocks.com/tc/stocks/quote/detailchart.aspx?symbol=";
+hk_week_3y_RSI_MACD = "http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&scheme=3&com=100&chartwidth=600&chartheight=500&stockid=STOCKCODE.HK&period=11&type=1&logoStyle=1&";
+hk_week_8y = "http://charts.aastocks.com/servlet/Charts?fontsize=14&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=9&indpara1=20&indpara2=2&indpara3=0&indpara4=0&indpara5=0&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&ref3para1=0&ref3para2=0&ref3para3=0&subChart4=9&ref4para1=0&ref4para2=0&ref4para3=0&subChart5=7&ref5para1=20&ref5para2=5&ref5para3=0&scheme=3&com=100&chartwidth=1000&chartheight=1200&stockid=STOCKCODE.HK&period=13&type=1&logoStyle=1&";
+const charts = document.getElementById("charts");
+var chart = document.getElementById("chart");
+
+const chartsPressed = e => { 
+  
+  const isButton = e.target.nodeName === 'IMG';
+  if(!isButton) { return; }
+  code=e.target.id;
+  longcode=code.toString();
+  longcode = longcode.padStart(5,"0");
+  if (e.shiftKey) {
+    window.open("https://www.gurufocus.com/stock/HKSE:" + longcode+"/summary", '_blank');
+  } else if (e.metaKey) {
+    window.open(aastock_url + code, '_blank'); 
+} else if (e.ctrlKey) {
+    window.open("https://www.sl886.com/stock/"+longcode, '_blank');
+  } else if (e.altKey) {
+    alert (longcode);
+  } else {
+    big_hk_chart(code);
+  }
+  
+  // alert(e.target.id);
+  
+}
+charts.addEventListener("click", chartsPressed);
+
+
+params = (new URL(document.location)).searchParams;
+tmp = params.get("hk");
+if (tmp !==null) {
+    hk_stocks=tmp.split(',');
+    for (i in hk_stocks) {
+
+        code = hk_stocks[i];
+        img = document.createElement("IMG");
+        url = hk_week_3y_RSI.replace("STOCKCODE", code);
+        img.src = url;
+        img.id = code;
+//        img.setAttribute("onclick", "big_chart(" + code + ");");
+//        img.setAttribute("ondragend", "goto_aastock(" + code + ");");
+        charts.appendChild(img);
+
+    }
+
+
+}
+
+function big_hk_chart(code) {
+
+    charts.style.display = "none";
+    // url=hk_week_3y_RSI_MACD.replace("STOCKCODE",code); 
+    url = hk_week_8y.replace("STOCKCODE", code);
+    document.getElementById("c").src = url;
+    chart.style.display = "block";
+    chart.setAttribute("onclick", "reset('" + code + "');");
+    // chart.setAttribute("ondragend", "goto_aastock(" + code + ");");
+
+}
+
+function reset(code) {
+
+    chart.style.display = "none";
+    charts.style.display = "block";
+    document.getElementById(code).scrollIntoView();
+
+}
+</script>
+</body>
+</html>
