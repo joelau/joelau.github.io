@@ -30,6 +30,7 @@ const chartsPressed = e => {
   if (e.shiftKey) {
     window.open("https://www.gurufocus.com/stock/HKSE:" + longcode+"/summary", '_blank');
   } else if (e.metaKey) {
+    code=code.toString().padStart(5, '0');
     window.open(aastock_url + code, '_blank'); 
 } else if (e.ctrlKey) {
     window.open("https://www.sl886.com/stock/"+longcode, '_blank');
